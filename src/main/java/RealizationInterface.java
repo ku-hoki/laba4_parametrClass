@@ -1,18 +1,16 @@
 import java.util.function.Function;
 
-public class RealizationInterface<T,R> implements FunctionalitySingleArg< FunctionalitySingleArg<T, R>, R> {
-    private T start;
-    private T end;
-    public RealizationInterface(T start, T end){
-        this.start = start;
-        this.end = end;
-    }
+public class RealizationInterface<T extends SingleArgFunction> implements  FunctionalitySingleArg<T>{
 
     @Override
-    public R calculate(FunctionalitySingleArg<T, R> argument) {
-        R valueStart = argument.calculate(start);
-        R valueEnd = argument.calculate(end);
+    public double Functional(T function) {
+        double lowerBound = function.getLowerBound();
+        double upperBound = function.getUpperBound();
+        double middlePoint = (lowerBound + upperBound)/2;
 
-        return valueSum =
+        return function.calculate(lowerBound) + function.calculate(upperBound) + function.calculate(middlePoint);
+    }
+
+
     }
 }
