@@ -1,4 +1,4 @@
 public interface FunctionalitySingleArg <T>{
-    double Functional(T function);//параметризированный метод
+    double calculateFunctional(T function);//параметризированный метод
 
 }
