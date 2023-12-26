@@ -15,7 +15,7 @@ public class SinFunction implements SingleArgFunction{
 
     @Override
     public double calculate(double argument) {
-        return A*sin(B*argument);
+        return A*Math.sin(B*argument);
     }
 
     @Override

@@ -15,7 +15,7 @@ public class DefiniteIntegralFunctional<T extends SingleArgFunction> implements 
             throw new IllegalArgumentException("Область определения функции не содержится в отрезке [a, b]");
         }
 
-        double interval = (upperLimit- lowerLimit)/10000; // для интегрирования будем использовать 100 прямоугольников под интегралом
+        double interval = (upperLimit- lowerLimit)/1000000; // для интегрирования будем использовать 100 прямоугольников под интегралом
         double integral = 0;
 
         for (double x = lowerLimit; x <upperLimit; x += interval){

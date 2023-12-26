@@ -16,6 +16,9 @@ public class DivisionFunction implements SingleArgFunction{
 
     @Override
     public double calculate(double argument) {
+        if(C*argument + D == 0){
+            throw new IllegalArgumentException("На ноль делить нельзя");
+        }
         return (A*argument+B)/(C*argument+D);
     }
 
